@@ -48,7 +48,7 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <td><?php echo $result['id']; ?></td>
                     <td><?php echo $result['hersteller']; ?></td>
                     <td><?php echo $result['preis']; ?></td>
-                    <td><a href="./delete_G1.php?deleteId=<?php echo $result['id'] ?>">DEL</a></td>
+                    <td><a href="./delete_G1.php?deleteId=<?php echo $result['id'] ?>">Delete</a></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>
