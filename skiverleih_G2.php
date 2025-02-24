@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/connect/connect_G2.php';
+require dirname(__DIR__) . '/connect/connect_G2.php';
 
 //Aufruf der Methode prepare() auf das Objekt $pdo
 $stmt = $pdo->prepare("SELECT * FROM `skier`");
@@ -58,8 +58,8 @@ $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <td><?php echo $result['id'] ?></td>
                 <td><?php echo $result['hersteller'] ?></td>
                 <td><?php echo $result['preis'] ?></td>
-                <td><a href="delete_G2.php?deleteId=2">Delete</a></td>
-                <td>Update</td>
+                <td><a href="delete_G2.php?deleteId=<?php echo $result['id'] ?>">Delete</a></td>
+                <td><a href="update_G2.php?updateId=<?php echo $result['id'] ?>">Update</a></td>
             </tr>
         <?php endforeach; ?>
         </tbody>
