@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/connect/connect_G2.php';
+require dirname(__DIR__) . '/connect/connect_G2.php';
 
 //Vorbefüllen der Input-Felder
 if(isset($_GET['updateId'])) {
@@ -43,6 +43,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SKI ÄNDERN</title>
+    <link rel="stylesheet" href="../views/bootstrap.min.css">
 </head>
 <body>
     <form action="" method="POST">

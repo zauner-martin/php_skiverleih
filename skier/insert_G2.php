@@ -1,6 +1,6 @@
 <?php
 
-require __DIR__ . '/connect/connect_G2.php';
+require dirname(__DIR__) . '/connect/connect_G2.php';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST') {
     $id = $_POST['id'];
@@ -27,6 +27,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ski anlegen</title>
+    <link rel="stylesheet" href="../views/bootstrap.min.css">
 </head>
 <body>
     <form action="" method="POST">
@@ -39,10 +40,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         <br><br>
         
         <label for="preis">Preis:</label>
-        <input type="text" id="preis" name="preis" step="0.01" required>
+        <input type="number" id="preis" name="preis" step="1" required>
         <br><br>
         
-        <button type="submit">Ski anlegen</button>
+        <button type="submit" class="btn btn-primary">Ski anlegen</button>
     </form>
 </body>
 </html>
